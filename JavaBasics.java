@@ -2,18 +2,18 @@ import java.util.*;
 public class JavaBasics {
     public static void main(String args[]) {
         // Scanner sc = new Scanner(System.in);
-        // String input = sc.next();
+        // String input = sc.next(); //Stores a single line only
         // System.out.println(input);
 
-        // String name = sc.nextLine();
+        // String name = sc.nextLine(); //Stores multiple words
         // System.out.println(name);
 
-        // int number = sc.nextInt();
+        // int number = sc.nextInt(); 
         // System.out.println(number);
 
         //  float price = sc.nextFloat();
         //  System.out.println(price);
-
+ 
         // Boolean bl = sc.nextBoolean();
         // System.out.println(bl);
 
