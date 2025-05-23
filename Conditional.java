@@ -34,16 +34,38 @@ public class Conditional {
     //     if(income<500000){
     //         tax = 0;
     //     }
-    //     else if(income>=500000 && income<1000000) {
-    //         tax = (int)(income*0.2);
-    //     }
-    //     else{
-    //         tax = (int)(income*0.3);
-    //     }
-    //     System.out.println("The tax you are paying is: "+ tax);
+    //     else if(income>=500000 && income<1000000) 
+
+    // //Ternary Operators
+    // int number = 7;
+    // String type = ((number%2) == 0) ?"even" : "odd";
+    // System.out.println(type);
+
+    //Check if Student is pass or Fail 
+
+    // int marks = 57;
+    // if(marks>=33 && marks <= 100) {
+    //     System.out.println("Pass");
+    // }
+    // else{
+    //     System.out.println("Fail");
     // }
 
-}
 
-      
-    
+    //Switch cases 
+    int number = 2;
+    switch(number) {
+        case 1: System.out.println("Samosa");
+                break;
+
+        case 2: System.out.println("Gulabjam");
+                break;
+                
+        case 3: System.out.println("Rolls");
+                break;
+
+        default: System.out.println("We wake up");
+
+    }
+    }
+}
