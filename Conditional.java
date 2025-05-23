@@ -53,19 +53,45 @@ public class Conditional {
 
 
     //Switch cases 
-    int number = 2;
-    switch(number) {
-        case 1: System.out.println("Samosa");
-                break;
+    // int number = 2;
+    // switch(number) {
+    //     case 1: System.out.println("Samosa");
+    //             break;
 
-        case 2: System.out.println("Gulabjam");
-                break;
+    //     case 2: System.out.println("Gulabjam");
+    //             break;
                 
-        case 3: System.out.println("Rolls");
-                break;
+    //     case 3: System.out.println("Rolls");
+    //             break;
 
-        default: System.out.println("We wake up");
+    //     default: System.out.println("We wake up");
 
+    // }
+
+    //Calculator using switch
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter number 1: ");
+    int A = sc.nextInt();
+    System.out.println("Enter number 2: ");
+    int B = sc.nextInt();
+
+    System.out.println("Enter operator: ");
+
+    char operator = sc.next().charAt(0);
+
+    switch(operator) {
+        case '+': System.out.println(A+B);
+                    break;
+        case '-': System.out.println(A-B);
+                    break;
+        case '*': System.out.println(A*B);
+                    break;
+        case '%': System.out.println(A%B);
+                    break;
+        case '/': System.out.println(A/B);
+                    break;
+
+        default: System.out.println("Wrong operator");
     }
     }
 }
