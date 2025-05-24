@@ -68,30 +68,95 @@ public class Conditional {
 
     // }
 
-    //Calculator using switch
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter number 1: ");
-    int A = sc.nextInt();
-    System.out.println("Enter number 2: ");
-    int B = sc.nextInt();
+        // Calculator using switch
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter number 1: ");
+        // int A = sc.nextInt();
+        // System.out.println("Enter number 2: ");
+        // int B = sc.nextInt();
 
-    System.out.println("Enter operator: ");
+        // System.out.println("Enter operator: ");
 
-    char operator = sc.next().charAt(0);
+        // char operator = sc.next().charAt(0);
 
-    switch(operator) {
-        case '+': System.out.println(A+B);
-                    break;
-        case '-': System.out.println(A-B);
-                    break;
-        case '*': System.out.println(A*B);
-                    break;
-        case '%': System.out.println(A%B);
-                    break;
-        case '/': System.out.println(A/B);
-                    break;
+        // switch(operator) {
+        //     case '+': System.out.println(A+B);
+        //                 break;
+        //     case '-': System.out.println(A-B);
+        //                 break;
+        //     case '*': System.out.println(A*B);
+        //                 break;
+        //     case '%': System.out.println(A%B);
+        //                 break;
+        //     case '/': System.out.println(A/B);
+        //                 break;
 
-        default: System.out.println("Wrong operator");
-    }
+        //     default: System.out.println("Wrong operator");
+        // }
+        //Q1 
+            // Scanner sc = new Scanner(System.in);
+            // System.out.println("Enter any number");
+            // int A = sc.nextInt();
+            // if(A>0){
+            //     System.out.println("It's a positive number");
+            // }
+            // else if(A == 0) {
+            //     System.out.println("It's neutral");
+            // }
+            // else{
+            //     System.out.println("It's a negative number");
+            // }
+
+        //Q2
+        // double temp = 103.5;
+        // if(temp>100){
+        //     System.out.println("You have a fever");
+        // }
+        // else{
+        //     System.out.println("No fever");
+        // }
+
+        //Q3
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter any number from 1 to 7");
+        // int A = sc.nextInt();
+
+    
+        // switch(A){
+        //     case 1: System.out.println("Monday");
+        //             break;
+        //     case 2: System.out.println("Tuesday");
+        //             break;
+        //     case 3: System.out.println("Wednesday");
+        //             break;
+        //     case 4: System.out.println("Thursday");
+        //             break;
+        //     case 5: System.out.println("Friday");
+        //             break;
+        //     case 6: System.out.println("Saturday");
+        //             break;
+        //     case 7: System.out.println("Sunday");
+        //             break;
+
+        //     default: System.out.println("Not a week day");
+        // }
+
+        //Q4
+        // int a = 63, b = 35;
+        // boolean x = (a>b) ? true : false;
+        // System.out.println(x);
+        // int y = (a>b) ? a : b;
+        // System.out.println(y);
+
+        //Q5
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter year");
+        int A = sc.nextInt();
+        if(A%4 == 0) {
+            System.out.println("Leap year");
+        }
+        else{
+            System.out.println("Not a leap year");
+        }
     }
 }
