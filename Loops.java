@@ -65,21 +65,82 @@ public class Loops {
         //     }
 
         //Print Reverse of a number
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter any number");
-        int n = sc.nextInt();
-        int lastDigit;
-        while(n>0) {
-            lastDigit = n%10;
-            System.out.print(lastDigit);
-            n = n/10;
-        }
-        System.out.println();
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter any number");
+        // int n = sc.nextInt();
+        // int lastDigit;
+        // while(n>0) {
+        //     lastDigit = n%10;
+        //     System.out.print(lastDigit);
+        //     n = n/10;
+        // }
+        // System.out.println();
         
+        //Reverse the orignal number and save 
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter any number");
+        // int n = sc.nextInt();
+        // int lastDigit;
+        // int rev = 0;
+        // while(n>0) {
+        //     lastDigit = n%10;
+        //     rev = (rev*10) + lastDigit;
+        //     n = n/10;
+        // }
+        // System.out.println(rev);
+
+        //do while loop
+        // int counter = 1;
+        // do{
+        //     System.out.println("Hello World!");
+        //     counter++;  
+        // } while(counter<=10);
+
+        //break statement
+        // for(int i=1;i<=5;i++) {
+        //     if(i==3){
+
+        //         break;
+        //     }
+        //     System.out.println(i);
+        // }
+        // System.out.println("I am out of the loop");
+
+        //
+        // Scanner sc = new Scanner(System.in);
+        // do{
+        //     System.out.print("Enter any number : ");
+        //     int n = sc.nextInt();
+
+        //     if(n%10 == 0) {
+        //         break   ;
+        //     }
+        //     System.out.println(n);
+        // } while(true);
+        // System.out.println("You entered a multiple of 10");
 
 
+        //CONTINUE
+            // for(int i=0;i<=10;i++){
+                
+            //     if(i==3){
+            //         continue;
+            //     }
 
+            // System.out.println(i);
+            // }
 
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.print("Enter any number : ");
+            int n = sc.nextInt();
+
+                if(n%10 ==0) {
+                    continue;
+            }
+
+            System.out.println("number was : " + n);
+        } while(true);
 
 
 
