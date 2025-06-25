@@ -130,18 +130,44 @@ public class Loops {
             // System.out.println(i);
             // }
 
-        Scanner sc = new Scanner(System.in);
-        do{
-            System.out.print("Enter any number : ");
-            int n = sc.nextInt();
+        // Scanner sc = new Scanner(System.in);
+        // do{
+        //     System.out.print("Enter any number : ");
+        //     int n = sc.nextInt();
 
-                if(n%10 ==0) {
-                    continue;
+        //         if(n%10 ==0) {
+        //             continue;
+        //     }
+
+        //     System.out.println("number was : " + n);
+        // } while(true);
+
+
+        //CHECK A NUMBER IS PRIME OR NOT
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any number : ");
+        int n = sc.nextInt();
+
+        if(n == 2){
+            System.out.println("n is prime");
+        } else {
+            boolean isPrime = true;
+            
+            for(int i = 2; i <= Math.sqrt(n); i++){
+                if(n % i == 0) {
+                    isPrime = false;
+                    break; // once we know it's not prime, we exit early
+                }
             }
 
-            System.out.println("number was : " + n);
-        } while(true);
+            if(isPrime == true) {
+                System.out.println("It's a prime number");
+            } else {
+                System.out.println("It's not a prime number");
+            }
+        }
 
+        
 
 
 
