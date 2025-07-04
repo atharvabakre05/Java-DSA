@@ -82,22 +82,22 @@ public class JavaBasics {
         // System.out.println(area);
 
         //Q3
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        // //Taking inputs
-        // float pencil = sc.nextFloat();
-        // float pen = sc.nextFloat();
-        // float eraser = sc.nextFloat();
+        //Taking inputs
+        float pencil = sc.nextFloat();
+        float pen = sc.nextFloat();
+        float eraser = sc.nextFloat();
 
-        // //Calculating the total and GST
-        // float total = pencil + pen + eraser;
-        // System.out.println("This is your total bill "+ total);
-        // float GST = total * 0.18f;
-        // System.out.println("GST added to this is " + GST);
-        // float finalBill = total + GST;
+        //Calculating the total and GST
+        float total = pencil + pen + eraser;
+        System.out.println("This is your total bill "+ total);
+        float GST = total * 0.18f;
+        System.out.println("GST added to this is " + GST);
+        float finalBill = total + GST;
 
-        // System.out.println("This is the finalBill " +finalBill);
-        // sc.close();
+        System.out.println("This is the finalBill " +finalBill);
+        sc.close();
 
 
         //Q5

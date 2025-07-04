@@ -14,7 +14,7 @@ public class Loops {
         //Print 1 to 10
         // int i = 1;
         // while(i<=10){
-        //     System.out.println(i + " ");
+        //     System.out.println(i);
         //     i++;
         // }
         // System.out.println("Printed numbers from 1 to 10");
@@ -144,28 +144,28 @@ public class Loops {
 
 
         //CHECK A NUMBER IS PRIME OR NOT
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter any number : ");
-        int n = sc.nextInt();
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter any number : ");
+        // int n = sc.nextInt();
 
-        if(n == 2){
-            System.out.println("n is prime");
-        } else {
-            boolean isPrime = true;
+        // if(n == 2){
+        //     System.out.println("n is prime");
+        // } else {
+        //     boolean isPrime = true;
             
-            for(int i = 2; i <= Math.sqrt(n); i++){
-                if(n % i == 0) {
-                    isPrime = false;
-                    break; // once we know it's not prime, we exit early
-                }
-            }
+        //     for(int i = 2; i <= Math.sqrt(n); i++){
+        //         if(n % i == 0) {
+        //             isPrime = false;
+        //             break; // once we know it's not prime, we exit early
+        //         }
+        //     }
 
-            if(isPrime == true) {
-                System.out.println("It's a prime number");
-            } else {
-                System.out.println("It's not a prime number");
-            }
-        }
+        //     if(isPrime == true) {
+        //         System.out.println("It's a prime number");
+        //     } else {
+        //         System.out.println("It's not a prime number");
+        //     }
+        // }
 
         
 
