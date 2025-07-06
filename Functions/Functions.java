@@ -15,7 +15,7 @@ public class Functions {
     public static void swap(int a, int b) {
 
         int temp = a;
-        a = b;
+        a = b;  
         b = temp; 
         
         System.out.println("a = " + a);
@@ -44,6 +44,29 @@ public class Functions {
         int binoCoeff = fact_n/(fact_r * fact_nmr);
         return binoCoeff;
     }
+
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+
+    public static float sum(float a, float b) {
+        return a + b;
+    }
+
+    public static boolean isPrime(int n) {
+        if(n == 2) {
+            return true;
+        }
+        for(int i = 2; i<=n-1; i++) {
+            if(n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //PRINT HELLO WORLD FUNCTION
@@ -68,12 +91,22 @@ public class Functions {
         
         // System.out.println(factorial(4));
         //Formula for binomial coeff = n!/(r)!*(n-r)!
-
-        System.out.println(binoCoeff(10, 10));    
+        // System.out.println(binoCoeff(10, 10));    
  
+        //FUNCTION OVERLOADING
+        // System.out.println(sum(5,2));
+        // System.out.println(sum(4.3f,2.7f));
+
+        // System.out.println(isPrime(2));          
 
 
 
 
+
+
+
+
+
+        
         }
 }
