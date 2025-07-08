@@ -73,8 +73,19 @@ public class Functions {
         }
         System.out.println();
     }
-    
 
+    public static void bintoDec(int binNum) {
+        int myNum = binNum;
+        int pow = 0;
+        int decNum = 0;
+        while(binNum>0){
+            int lastDigit = binNum % 10;
+            decNum = decNum + (lastDigit * (int)Math.pow(2, pow));
+            pow++;
+            binNum = binNum/10;
+        }
+        System.out.println("The decimal of binary number " + myNum + " = " + decNum);
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //PRINT HELLO WORLD FUNCTION
@@ -109,6 +120,10 @@ public class Functions {
         
         //PRINTING PRIME NUMBERS IN RANGE
         // primeInRange(16);
+
+
+        //BINARY TO DECIMAL
+        bintoDec(101);
 
 
 
