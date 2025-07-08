@@ -65,6 +65,14 @@ public class Functions {
         return true;
     }
 
+    public static void primeInRange(int n) {
+        for(int i = 2; i<=n; i++) {
+            if(isPrime(i)){
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
     
 
     public static void main(String[] args) {
@@ -98,15 +106,12 @@ public class Functions {
         // System.out.println(sum(4.3f,2.7f));
 
         // System.out.println(isPrime(2));          
-
-
-
-
-
-
-
-
-
         
+        //PRINTING PRIME NUMBERS IN RANGE
+        // primeInRange(16);
+
+
+
+
         }
 }
