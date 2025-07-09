@@ -75,17 +75,44 @@ public class Functions {
     }
 
     public static void bintoDec(int binNum) {
-        int myNum = binNum;
         int pow = 0;
+        int myNum = binNum;
         int decNum = 0;
-        while(binNum>0){
+
+        while(binNum>0) {
             int lastDigit = binNum % 10;
-            decNum = decNum + (lastDigit * (int)Math.pow(2, pow));
+            decNum = decNum + (lastDigit * (int) Math.pow(2, pow));
             pow++;
             binNum = binNum/10;
-        }
-        System.out.println("The decimal of binary number " + myNum + " = " + decNum);
+        } 
+        System.out.println("The decimal conversition of binary number " + myNum + " = "+ decNum);
+
     }
+
+
+    public static void dectoBin(int decNum) {
+        int myNum = decNum;
+        int pow = 0;
+        int rem = 0;
+        int binNum = 0;
+
+        while(decNum>0) {
+            rem = decNum % 2;
+            binNum = binNum + (int)(rem * Math.pow(10, pow));
+            pow++;
+            decNum = decNum/2;
+        }
+
+        System.out.println("The binary number of the decimal number " + myNum + " = " + binNum );
+    }
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //PRINT HELLO WORLD FUNCTION
@@ -123,9 +150,11 @@ public class Functions {
 
 
         //BINARY TO DECIMAL
-        bintoDec(101);
+        // bintoDec(101);
 
 
+        //DECIMAL TO BINARY
+        dectoBin(7);
 
 
         }
