@@ -33,6 +33,19 @@ public class Practice{
   }
 
 
+    //Q5
+    public static void sumOfDigits(int a ) {
+        int myNum = a;
+        int sum = 0;
+        int lastDigit = 0;
+        while(a>0) {
+            lastDigit = a % 10;
+            sum = sum + lastDigit;
+            a = a/10;
+        }
+        System.out.println("The sum of the digits of the number " + myNum + " = " + sum);
+    }
+
 
 
 
@@ -40,7 +53,8 @@ public class Practice{
     public static void main(String [] args) {
         // average(10, 10, 10);
         // System.out.println(isEven(4));
-        palinDrome(123);
+        // palinDrome(123);
+        sumOfDigits(43278);
 
     }
 }
