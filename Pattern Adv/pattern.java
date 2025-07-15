@@ -143,6 +143,25 @@ public class pattern{
         }
     }
 
+    public static void hollow_rhombus(int n){
+        for(int i=1; i<=n; i++) {
+            for(int j=1; j<=(n-i); j++) {
+                System.out.print(" ");
+            }
+            for(int j=1; j<=n; j++){
+                if(i==1 || i==n || j==1 || j==n){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }   
+            System.out.println();
+        }
+
+
+    }
+
 
 
     public static void main(String [] args) {
@@ -153,7 +172,8 @@ public class pattern{
         // zero_one_triangle(5);
         // butterfly(10);
         // parallelogram(4);
-        solid_rhombus(7);;
+        // solid_rhombus(7);
+        hollow_rhombus(5);
 
 
 
