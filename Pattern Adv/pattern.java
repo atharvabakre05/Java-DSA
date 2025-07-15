@@ -117,11 +117,27 @@ public class pattern{
             for(int j=1;j<=(n-i); j++) {
                 System.out.print(" ");
             }
+            //Printing stars
             for(int j=1;j<=4;j++) {
                 System.out.print("*");
             }
+            //Printing space
             for(int j=1;j<=(n-(n-i)-1);j++){
                 System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void solid_rhombus(int n) {
+        for(int i=1; i<=n; i++) {
+            //spaces 
+            for(int j=1; j<=(n-i); j++) {
+                System.out.print(" ");
+            }
+            for(int j=1; j<=n;j++){
+                System.out.print("*");
             }
             System.out.println();
         }
@@ -136,7 +152,8 @@ public class pattern{
         // floyd_triangle(5);
         // zero_one_triangle(5);
         // butterfly(10);
-        parallelogram(4);
+        // parallelogram(4);
+        solid_rhombus(7);;
 
 
 
