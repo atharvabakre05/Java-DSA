@@ -177,7 +177,7 @@ public class pattern{
             }
             System.out.println();
         
-    }
+    }   
     //2nd Half
       for(int i=n; i>=1;i--) {
             //Spaces
