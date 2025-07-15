@@ -145,9 +145,11 @@ public class pattern{
 
     public static void hollow_rhombus(int n){
         for(int i=1; i<=n; i++) {
+            //Spaces
             for(int j=1; j<=(n-i); j++) {
                 System.out.print(" ");
             }
+            //Star and space
             for(int j=1; j<=n; j++){
                 if(i==1 || i==n || j==1 || j==n){
                     System.out.print("*");
@@ -158,10 +160,36 @@ public class pattern{
             }   
             System.out.println();
         }
-
-
     }
 
+
+    public static void diamond(int n) {
+        //1st half
+        for(int i=1; i<=n;i++) {
+            //Spaces
+            for(int j=1; j<=n-i; j++) {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=(2*i)-1;j++) {
+                System.out.print("*");
+                
+                
+            }
+            System.out.println();
+        
+    }
+    //2nd Half
+      for(int i=n; i>=1;i--) {
+            //Spaces
+            for(int j=1; j<=n-i; j++) {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=(2*i)-1;j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+    }
+}
 
 
     public static void main(String [] args) {
@@ -173,9 +201,9 @@ public class pattern{
         // butterfly(10);
         // parallelogram(4);
         // solid_rhombus(7);
-        hollow_rhombus(5);
+        // hollow_rhombus(5);
 
-
+        diamond(4);
 
 
 
