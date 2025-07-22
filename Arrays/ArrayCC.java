@@ -18,15 +18,46 @@ public class ArrayCC{
         return -1;
     }
 
+
+
+
     public static int largestNum(int num[]) {
-        int largest = Integer.MIN_VALUE; // =infinity
+        int largest = Integer.MIN_VALUE; // -infinity
+        int smallest = Integer.MAX_VALUE; // +infinity
         for(int i=0; i<num.length;i++){
             if(largest<num[i]) {
                 largest = num[i];
             }
         }
+
+        for(int i=0; i<num.length;i++){
+            if(smallest>num[i]) {
+                largest = num[i];
+            }
+        }
         return largest;
     }
+
+
+    public static int binarySearch(int num[], int key) {
+        int start=0, end=num.length -1;
+        int mid;
+        while(start<=end) {
+            mid = (start+end)/2;
+            if(num[mid] == key) {
+                return mid;
+            } 
+            if(num[mid]>key) {
+                end = mid-1;
+            } else{
+                start = mid+1;
+            }
+        }
+        return -1;
+    }
+
+
+
 
 
     public static void main(String[] args) {
@@ -83,8 +114,15 @@ public class ArrayCC{
 
         //LARGEST NUMBER IN A GIVEN ARRAY
 
-        int num[] = {1,55,67,99, 101, 1, 01, 99};
-        System.out.println("The largest number of the array is: " + largestNum(num));
+        // int num[] = {1,55,67,99, 101, 1, 01, 99};
+        // System.out.println("The largest number of the array is: " + largestNum(num));
+        // System.out.println("The lowest number of the array is: " + lowestNum(num));
+
+
+        //BINARY SEARCH
+        int num[] = {1,24,66,79,101,221,391};
+        int key = 66;
+        System.out.println("The key value in the sorted array is: " + binarySearch(num, key));
 
 
 
@@ -98,6 +136,10 @@ public class ArrayCC{
 
 
 
+
+
+
+ 
 
 
 
