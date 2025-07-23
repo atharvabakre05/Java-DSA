@@ -57,8 +57,46 @@ public class ArrayCC{
     }
 
 
+    public static void reverse(int num[]) {
+        int start = 0, end = num.length-1;
+        while(start<end) {
+            int temp = start; 
+            start = end; 
+            end = start;
 
+            end--;
+            start++;
+        }
+    }
 
+    public static void pairs(int num[]){
+        for(int i=0; i<num.length; i++) {
+            int curr = num[i];
+
+            for(int j=i+1; j<num.length; j++) {
+                System.out.print("(" + curr + "," + num[j] + ") " );
+            }
+            System.out.println();
+        }
+    }
+
+    public static void subArrays(int num[]) {
+        int ts=0;
+
+        for(int i=0; i<num.length; i++) {
+            int start = i;
+            for(int j=i; j<num.length; j++) {
+                int end = j;
+                for(int k=start; k<=end; k++){
+                    System.out.print(num[k] + " "); 
+                }
+                ts++;
+                System.out.println();
+            }
+            System.out.println();
+        }
+          System.out.println("Total number of subArrays = " +ts);
+    }
 
     public static void main(String[] args) {
         // int marks[] = new int[50];
@@ -119,11 +157,31 @@ public class ArrayCC{
         // System.out.println("The lowest number of the array is: " + lowestNum(num));
 
 
-        //BINARY SEARCH
-        int num[] = {1,24,66,79,101,221,391};
-        int key = 66;
-        System.out.println("The key value in the sorted array is: " + binarySearch(num, key));
+        // //BINARY SEARCH
+        // int num[] = {1,24,66,79,101,221,391};
+        // int key = 66;
+        // System.out.println("The key value in the sorted array is: " + binarySearch(num, key));
 
+
+
+
+
+        //REVERSE OF ARRAY USING SWAP
+        // int num[] = {3, 45, 77, 89, 100, 101};
+
+        // for(int i=0; i<num.length; i++) {
+        //     System.out.print(num[i] + " ");
+        // }
+        
+
+        //PAIRS IN ARRAY
+
+        // int num[] = {2, 4, 20, 33, 48, 54, 101};
+        // pairs(num);
+
+        //PRINT SUB-ARRAYS
+        int num[] = {2, 4, 55, 66, 88, 100};
+        subArrays(num);
 
 
 
