@@ -80,23 +80,46 @@ public class ArrayCC{
         }
     }
 
-    public static void subArrays(int num[]) {
-        int ts=0;
-
+    public static void printSubArrays(int num[]) {
+        int ts = 0;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        
         for(int i=0; i<num.length; i++) {
-            int start = i;
-            for(int j=i; j<num.length; j++) {
-                int end = j;
-                for(int k=start; k<=end; k++){
-                    System.out.print(num[k] + " "); 
+            int sum=0;
+            int start=i;
+
+            for(int j=i; j<num.length;j++) {
+                int end=j;
+                for(int k=start; k<=end; k++) {
+                    System.out.print(num[k] + " ");
+                    sum += num[k];
+                }
+                if(sum>max) {
+                    max = sum;
+                } 
+                if(sum<min) {
+                    min = sum;
                 }
                 ts++;
                 System.out.println();
             }
+            System.out.println("Sum: "+ sum);
             System.out.println();
         }
-          System.out.println("Total number of subArrays = " +ts);
+        System.out.println("The total number of subarrays are " + ts);
+        System.out.println("The maximum sum of an array here is " + max);
+        System.out.println("The minimum sum of an array here is " + min);
+
     }
+
+
+
+
+
+
+
+
 
     public static void main(String[] args) {
         // int marks[] = new int[50];
@@ -179,9 +202,10 @@ public class ArrayCC{
         // int num[] = {2, 4, 20, 33, 48, 54, 101};
         // pairs(num);
 
-        //PRINT SUB-ARRAYS
-        int num[] = {2, 4, 55, 66, 88, 100};
-        subArrays(num);
+        //PRINT SUB-ARRAYS and sub arrays Sum
+        int num[] = {1,2,3};
+        printSubArrays(num);
+    
 
 
 
