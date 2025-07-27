@@ -57,24 +57,35 @@ public class Arrays2 {
     }
 
     //KADANE's Algorithm
-    public static void kadane(int num[]){
 
+    public static void kadane(int num[]) {
         int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
-        
+        boolean allNegative = true;
+        int maxElement = num[0];
+
         for(int i=0; i<num.length; i++) {
-            currSum = currSum + num[i];
-            if(currSum<0) {
+            if(num[i]>=0) {
+                allNegative = false;
+            }
+
+            if(num[i]>maxElement) {
+                maxElement = num[i];
+            }
+            currSum += num[i];
+            if(currSum<0){
                 currSum = 0;
             }
-            maxSum = Math.max(currSum, maxSum);
+
+            if(currSum>maxSum) {
+                maxSum = currSum;
+            }
+            if(allNegative) {
+                maxSum = maxElement;
+            }
         }
-        System.out.println("The maximum sum of subArray is " + maxSum);
+        System.out.println("The maximum sum of SubArray is " + maxSum);
     }
-
-
-
-
 
 
 
@@ -100,7 +111,7 @@ public class Arrays2 {
         // prefixSubarrays(num);
 
         //KADADNE'S ALgorithm
-        int num [] = {-1, -3, 4, -1, -2, 1, 5, -3};
+        int num [] = {-11, -3, -4, -2, -10, -9, -2};
         kadane(num);
 
 
