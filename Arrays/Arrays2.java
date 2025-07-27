@@ -22,6 +22,7 @@ public class Arrays2 {
         System.out.println("Max sum is " + maxSum);
     }
 
+    //PREFIX SUB ARRAY
     public static void prefixSubarrays(int num[]) {
         int currSum = 0;
         int maxSum = Integer.MAX_VALUE;
@@ -55,6 +56,30 @@ public class Arrays2 {
 
     }
 
+    //KADANE's Algorithm
+    public static void kadane(int num[]){
+
+        int maxSum = Integer.MIN_VALUE;
+        int currSum = 0;
+        
+        for(int i=0; i<num.length; i++) {
+            currSum = currSum + num[i];
+            if(currSum<0) {
+                currSum = 0;
+            }
+            maxSum = Math.max(currSum, maxSum);
+        }
+        System.out.println("The maximum sum of subArray is " + maxSum);
+    }
+
+
+
+
+
+
+
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -71,7 +96,14 @@ public class Arrays2 {
 
 
         //SUM OF ARRAY USING PREFIX ARRAY {EFFICIENT}
-        int num[] = {2, 5, -7, 10, 9};
-        prefixSubarrays(num);
+        // int num[] = {2, 5, -7, 10, 9};
+        // prefixSubarrays(num);
+
+        //KADADNE'S ALgorithm
+        int num [] = {-1, -3, 4, -1, -2, 1, 5, -3};
+        kadane(num);
+
+
+
     }
 }
