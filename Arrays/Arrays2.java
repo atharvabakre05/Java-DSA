@@ -113,8 +113,5 @@ public class Arrays2 {
         //KADADNE'S ALgorithm
         int num [] = {-11, -3, -4, -2, -10, -9, -2};
         kadane(num);
-
-
-
     }
 }
