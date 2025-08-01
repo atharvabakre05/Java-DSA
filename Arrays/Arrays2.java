@@ -88,10 +88,6 @@ public class Arrays2 {
     }
 
 
-
-
-
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -105,7 +101,7 @@ public class Arrays2 {
 
         //BREAK //25-07-25
 
-
+        
         //SUM OF ARRAY USING PREFIX ARRAY {EFFICIENT}
         // int num[] = {2, 5, -7, 10, 9};
         // prefixSubarrays(num);
