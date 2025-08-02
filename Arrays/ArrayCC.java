@@ -18,9 +18,6 @@ public class ArrayCC{
         return -1;
     }
 
-
-
-
     public static int largestNum(int num[]) {
         int largest = Integer.MIN_VALUE; // -infinity
         int smallest = Integer.MAX_VALUE; // +infinity
@@ -42,14 +39,18 @@ public class ArrayCC{
     public static int binarySearch(int num[], int key) {
         int start=0, end=num.length -1;
         int mid;
+
         while(start<=end) {
             mid = (start+end)/2;
+
             if(num[mid] == key) {
                 return mid;
             } 
+
             if(num[mid]>key) {
                 end = mid-1;
-            } else{
+            } 
+            else{
                 start = mid+1;
             }
         }
