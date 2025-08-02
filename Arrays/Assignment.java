@@ -1,3 +1,4 @@
+import java.util.*;
 public class Assignment {
 
 
@@ -54,12 +55,44 @@ public class Assignment {
     }
 
 
+    //Q3
+    public static int stocks(int price[]){
+
+        int buyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for(int i=0; i<price.length; i++) {
+
+            if(price[i]<buyPrice) {
+                buyPrice = price[i];
+            }
+            else{
+                int profit = price[i] - buyPrice;
+             
+                maxProfit = Math.max(profit, maxProfit);
+
+            }
+        }
+        return maxProfit;
+    }
+
     public static void main(String[] args) {
 
-        int num[] = {4,5,6,7,0,1,2};
-        int key = 4;
-        int result = search(num, key);
-        System.out.print("The Element found at index " + '{' +  result + '}' );
+
+        //Q1 BINARY SEARCH ROTATED ARRAY AT INDEX PIVOT
+        // int num[] = {4,5,6,7,0,1,2};
+        // int key = 4;
+        // int result = search(num, key);
+        // System.out.print("The Element found at index " + '{' +  result + '}' );
+
+
+
+        //Q2 Maximum price
+        int price[] = {7,1,5,3,6,4};
+        System.out.println("The maximum profit of all the prices shared in all days are: " + stocks(price));
+
+
+
     }
     
 }
