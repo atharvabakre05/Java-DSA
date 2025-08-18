@@ -1,44 +1,40 @@
 import java.util.*;
-    public class Sorts{
-        public static void BubbleSort(int arr[]) {
-            int n = arr.length;
-            boolean isAlreadysortArray = true; //Assuming the array is sorted
+public class Sorts{
+    public static void bubbleSort(int arr[]){
+        for(int turn=0; turn<arr.length-1; turn++){
+            boolean isSwapped = false;
 
-            for(int turn=0; turn<=n-2; turn++){             //outer loop
-                boolean swapped = false;
-
-                for(int j=0; j<=n-2-turn;j++) {
-                    if(arr[j]>arr[j+1]){
-                        int temp = arr[j];
-                        arr[j] = arr[j+1];
-                        arr[j+1] = temp;
-                        swapped = true;
-                        isAlreadysortArray = false;                    
-
-                    }
-                    if(!swapped){
-                        break;
-                    }
-                    }
-                if(isAlreadysortArray) {
-                    System.out.print("The array is already sorted");
+            for(int j=0; j<arr.length-1-turn; j++){
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    isSwapped = true;
                 }
-                    
+            }
+            if(!isSwapped){
+                if(turn==0){
+                System.out.println("The array is already sorted");
+                break;
+                }
+               
             }
 
         }
 
-        public static void printArr(int arr[]) {
-            for(int i=0; i<=arr.length-1; i++) {
-                System.out.print(arr[i] + " ");
-            }
-            System.out.println();
-        }
+    }
 
-
-        public static void main(String[] args) {
-            int arr[] = {5,4,1,3,2};
-            BubbleSort(arr);
-            printArr(arr);
+    public static void displayArray(int arr[]) {
+        System.out.println("The Sorted array is");
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
         }
     }
+    public static void main(String args[]){
+        int arr[] = {10,22,34,57,90};
+        bubbleSort(arr);
+        displayArray(arr);
+    }
+
+}
+    
