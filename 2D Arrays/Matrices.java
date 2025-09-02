@@ -1,6 +1,25 @@
 import java.util.Scanner;
 
 public class Matrices{
+
+    public static boolean Search(int arr[][], int key){
+        for(int i=0; i<arr.length; i++) {
+            for(int j=0; j<arr[0].length; j++){
+                if(key == arr[i][j]){
+                    System.out.print("Key found at (" + i + ","+ j+")");
+                    return true;
+                }
+            }
+        }
+        System.out.println("Key not found");
+        return false;
+    }
+
+    
+
+
+
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int arr[][] = new int[3][3];
@@ -21,5 +40,6 @@ public class Matrices{
             }
             System.out.println();
         }
+        Search(arr, 5);
     }
 }
