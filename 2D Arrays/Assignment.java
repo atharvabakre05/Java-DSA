@@ -13,20 +13,33 @@ public class Assignment {
     //     System.out.println("The total 7 in the whole matrix are: " + count);
     // }
 
-    public static void secondRowSum(int num[][]){
-        int sum=0;
-        int row=1;
-        for(int j=0; j<num[row].length; j++){
-            sum+=num[row][j];
+    //Q2
+    // public static void secondRowSum(int num[][]){
+    //     int sum=0;
+    //     int row=1;
+    //     for(int j=0; j<num[row].length; j++){
+    //         sum+=num[row][j];
+    //     }
+    //     System.out.println("The sum of the second row of the array is: "+ sum); 
+    // }
+
+    //Q3
+
+    public static void transposeMatrix(int num[][]){
+        for(int i=0; i<num[0].length; i++){
+            for(int j=0; j<num.length; j++){
+                System.out.print(num[j][i]);
+            }
+            System.out.println();
         }
-        System.out.println("The sum of the second row of the array is: "+ sum); 
-
-
     }
+
+
     
     public static void main(String[] args){
-        int num[][] = {{4,7,8}, {8,8,7}, {9,10,11}, {14,15,16}};
+        int num[][] = {{4,7,8}, {8,8,7}};
         // total7(nums); //Q1
-        secondRowSum(num);
+        // secondRowSum(num); //Q2
+        transposeMatrix(num);
     }
 }
