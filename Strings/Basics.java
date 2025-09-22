@@ -7,7 +7,16 @@ public class Basics{
         System.out.print(str.charAt(i) + " ");
     }
     System.out.println();
-}
+    }
+
+    public static String getSubString(String str, int si, int ei){
+        String subString = "";
+        for(int i=si; i<ei; i++){
+            subString+=str.charAt(i);
+        }
+        return subString;
+    }
+
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         // String name, sentence;
@@ -19,14 +28,17 @@ public class Basics{
         // System.out.println(sentence.length());
 
         
-        //Concatination and charAt 
-        String firstName = ("Atharva");
-        String lastName = ("Bakre");
-        String fullName = firstName + " " + lastName;
-        // System.out.println("My full name is: " + fullName);
-        // System.out.println(fullName.charAt(2));
-        printLetters(fullName);
+        // //Concatination and charAt 
+        // String firstName = ("Atharva");
+        // String lastName = ("Bakre");
+        // String fullName = firstName + " " + lastName;
+        // // System.out.println("My full name is: " + fullName);
+        // // System.out.println(fullName.charAt(2));
+        // printLetters(fullName);
 
+        //SUBSTRING 
+        String str = "HelloWorld";
+        System.out.println(getSubString(str, 0, 4));
 
         
     }
