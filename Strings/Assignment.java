@@ -11,6 +11,9 @@ public class Assignment {
         return count;
     }
 
+    //Q2
+    
+
     public static void main(String args[]){
         String str = "Atharva atharva";
         System.out.println(lowerVowels(str));
