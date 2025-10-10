@@ -1,3 +1,4 @@
+
 import java.util.*;
     public class bitManiPulation{
         public static void oddOrEven(int n){
