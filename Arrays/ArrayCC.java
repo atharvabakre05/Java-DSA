@@ -117,11 +117,6 @@ public class ArrayCC{
 
 
 
-
-
-
-
-
     public static void main(String[] args) {
         // int marks[] = new int[50];
         // Scanner sc = new Scanner(System.in);
