@@ -48,7 +48,7 @@ public class revision{
     }
 
     public static void reverseOptimized(int arr[]){
-        int n = arr.length-1;
+        int n = arr.length-1;   
         int first = 0;
         int last = n;
 
@@ -59,7 +59,17 @@ public class revision{
             first++;
             last--;
         }   
+    }
 
+    public static void pairArray(int arr[]){
+        
+        for(int i=0; i<arr.length;i++){
+            int curr = arr[i];
+            for(int j=i+1; j<arr.length; j++){
+                System.out.print("(" + curr + "," + arr[j] + ") ");
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args){
@@ -103,11 +113,16 @@ public class revision{
         // reverseArray(arr);
 
         //Reverse of an Array (Optimized)
-        int arr[] = {1,2,4,6,99,100};
-        System.out.println("The reverse of the array is: ");
-        reverseOptimized(arr);
-        for(int i=0; i<=arr.length-1; i++){
-            System.out.print(arr[i]+ ",");
-        }
+        // int arr[] = {1,2,4,6,99,100};
+        // System.out.println("The reverse of the array is: ");
+        // reverseOptimized(arr);
+        // for(int i=0; i<=arr.length-1; i++){
+        //     System.out.print(arr[i]+ ",");
+        // }
+
+
+        //Pair of Arrays
+        int arr[] = {2,4,6,9,10,111};
+        pairArray(arr);
     }  
 }
