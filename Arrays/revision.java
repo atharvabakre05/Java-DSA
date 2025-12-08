@@ -72,6 +72,18 @@ public class revision{
         }
     }
 
+    public static void printSubArrays(int arr[]) {
+        for(int i=0; i<arr.length; i++){
+            for(int j=i; j<arr.length; j++){
+                for(int k=i; k<=j; k++){
+                    System.out.print(arr[k]+ " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args){
 
         // int marks[] = new int[100];
@@ -122,7 +134,12 @@ public class revision{
 
 
         //Pair of Arrays
-        int arr[] = {2,4,6,9,10,111};
-        pairArray(arr);
+        // int arr[] = {2,4,6,9,10,111};
+        // pairArray(arr);
+
+        //Print all SubArrays
+        int arr[] = {1,2,44,5,666,7777};
+        printSubArrays(arr);
+
     }  
 }
