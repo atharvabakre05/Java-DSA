@@ -73,17 +73,41 @@ public class revision{
     }
 
     public static void printSubArrays(int arr[]) {
+        int ts = 0;
         for(int i=0; i<arr.length; i++){
             for(int j=i; j<arr.length; j++){
                 for(int k=i; k<=j; k++){
                     System.out.print(arr[k]+ " ");
                 }
+                ts++;
                 System.out.println();
             }
             System.out.println();
         }
+        System.out.println("The total number of all subArrays is: " + ts);  
     }
 
+    public static void maxArray(int arr[]){
+        int maxSum = Integer.MIN_VALUE;
+        for(int i=0; i<arr.length; i++){
+            int sum = 0;
+
+            for(int j=i; j<arr.length; j++){
+                sum += arr[j];
+                System.out.println("SubArray: ");
+                for(int k=i;k<=j; k++){
+                    System.out.print(arr[k]+ " ");
+                }
+
+                System.out.println("The Sum of the SubArray is: "+ sum);
+                if(maxSum<sum){
+                    maxSum = sum;
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("This is the maximum sum of the array: " + maxSum);
+    }
     public static void main(String[] args){
 
         // int marks[] = new int[100];
@@ -138,8 +162,14 @@ public class revision{
         // pairArray(arr);
 
         //Print all SubArrays
-        int arr[] = {1,2,44,5,666,7777};
-        printSubArrays(arr);
+        // int arr[] = {1,22,44,78,1024};
+        // printSubArrays(arr);
+
+
+        //Maximum sum of SubArray
+        int arr[] = {1,22,44,78,1024};
+
+        maxArray(arr);   
 
     }  
 }

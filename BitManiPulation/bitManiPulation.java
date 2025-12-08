@@ -1,4 +1,4 @@
-import java.util.*;
+  import java.util.*;
 public class bitManiPulation{
     public static void oddOrEven(int n) {
         int bitMask = 1;
