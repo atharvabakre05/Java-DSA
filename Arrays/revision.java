@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class revision{
 
     public static int linearSearch(String arr[], String key){
@@ -18,6 +17,8 @@ public class revision{
             if(largest<arr[i]){
                 largest = arr[i];
             }
+        
+            
         }
         return largest;
     }
@@ -29,17 +30,38 @@ public class revision{
 
         while(start<=end){
             int mid = (start + end)/2;
-            if(arr[mid] == key){
+            if(arr[mid] == key){ 
                 return mid;
             }if(arr[mid]>key){
-                end = mid-1;
+                end = mid-1;    
             }else{
                 start = mid+1;
             }
          }
          return -1;
     }
-    
+    public static void reverseArray(int arr[]){
+        int n = arr.length-1;
+        for(int i=n; i>=0; i--){
+            System.out.print(arr[i] + ",");
+        }
+    }
+
+    public static void reverseOptimized(int arr[]){
+        int n = arr.length-1;
+        int first = 0;
+        int last = n;
+
+        while(first<last){
+            int temp = arr[last];
+            arr[last] = arr[first];
+            arr[first] = temp;
+            first++;
+            last--;
+        }   
+
+    }
+
     public static void main(String[] args){
 
         // int marks[] = new int[100];
@@ -70,8 +92,22 @@ public class revision{
 
         //BINARY SEARCH
 
-        int arr[] = {1,8,99,101,882,1020, 9991};
-        int index = binarySearch(arr, 1020);
-        System.out.println("The index of the element in the array was found at: " + index);
+        // int arr[] = {1,8,99,101,882,1020, 9991};
+        // int index = binarySearch(arr, 1020);
+        // System.out.println("The index of the element in the array was found at: " + index);
+
+
+        //Reverse of an Array
+        // int arr[] = {1,4,66,99,1010};
+        // System.out.println("The reverse of the array is: ");
+        // reverseArray(arr);
+
+        //Reverse of an Array (Optimized)
+        int arr[] = {1,2,4,6,99,100};
+        System.out.println("The reverse of the array is: ");
+        reverseOptimized(arr);
+        for(int i=0; i<=arr.length-1; i++){
+            System.out.print(arr[i]+ ",");
+        }
     }  
 }
