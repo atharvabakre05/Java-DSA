@@ -13,7 +13,7 @@ import java.util.*;
             int rightMax[] = new int[n];
             rightMax[n-1]  = height[n-1];
             for(int i=n-2; i>=0; i--) {
-                rightMax[ij] = Math.max(height[i], rightMax[i+1]);
+                rightMax[i] = Math.max(height[i], rightMax[i+1]);
             }
             int waterLevel = 0;
             int trappedWater = 0;

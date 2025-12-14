@@ -87,27 +87,35 @@ public class revision{
         System.out.println("The total number of all subArrays is: " + ts);  
     }
 
-    public static void maxArray(int arr[]){
-        int maxSum = Integer.MIN_VALUE;
-        for(int i=0; i<arr.length; i++){
-            int sum = 0;
-
-            for(int j=i; j<arr.length; j++){
-                sum += arr[j];
-                System.out.println("SubArray: ");
-                for(int k=i;k<=j; k++){
-                    System.out.print(arr[k]+ " ");
+    public static void maxSubArrSum(int num[]){
+        int ms = Integer.MIN_VALUE;
+        for(int i=0; i<num.length; i++) {
+            for(int j=0; j<num.length; j++){
+                int cs  = 0;
+                for(int k=i; k<=j; k++) {
+                    cs = cs + num[k];
                 }
+                ms = Math.max(cs, ms);
 
-                System.out.println("The Sum of the SubArray is: "+ sum);
-                if(maxSum<sum){
-                    maxSum = sum;
-                }
             }
-            System.out.println();
         }
-        System.out.println("This is the maximum sum of the array: " + maxSum);
+        System.out.println("The maximum sum of the subArray is: " + ms);
     }
+
+    public static void kadanes(int arr[]){
+        int cs = 0;
+        int ms = Integer.MIN_VALUE;
+        for(int i=0; i<arr.length; i++){
+            cs  = arr[i] + cs;
+            if(cs<0){
+                cs = 0;
+            }
+            ms = Math.max(cs, ms);
+        }
+        System.out.println("According to the kadanes algo the maximum sum of the subArray is: " + ms);
+    }
+
+
     public static void main(String[] args){
 
         // int marks[] = new int[100];
@@ -167,9 +175,12 @@ public class revision{
 
 
         //Maximum sum of SubArray
-        int arr[] = {1,22,44,78,1024};
-
-        maxArray(arr);   
-
+        // int arr[] = {1,22,44,78,1024};
+        // maxSubArrSum(arr);  
+        
+        
+        //Kadanes algo
+        int arr[] = {1,-4,6,8,9,10,-2};
+        kadanes(arr);
     }  
-}
+}  
