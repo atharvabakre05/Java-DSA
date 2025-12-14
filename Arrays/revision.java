@@ -116,6 +116,19 @@ public class revision{
     }
 
 
+    public static int kadanesOg(int arr[]){
+        int currSum = arr[0];
+        int maxSum = arr[0];
+
+        for(int i=1; i<arr.length; i++){
+            currSum = Math.max(currSum, currSum + arr[i]);
+            maxSum = Math.max(currSum, maxSum);
+        }
+        return maxSum;
+    }
+
+
+
     public static void main(String[] args){
 
         // int marks[] = new int[100];
@@ -180,7 +193,12 @@ public class revision{
         
         
         //Kadanes algo
+        // int arr[] = {1,-4,6,8,9,10,-2};
+        // kadanes(arr);
+
+
+        //Best kadanes algo
         int arr[] = {1,-4,6,8,9,10,-2};
-        kadanes(arr);
+        System.out.println(kadanesOg(arr));
     }  
 }  
