@@ -7,7 +7,7 @@ public class revision{
             if(key.equals(arr[i])){
                 return i;
             }
-        }
+        }   
         return -1;
     }
 
@@ -16,9 +16,7 @@ public class revision{
         for(int i=0; i<arr.length; i++){
             if(largest<arr[i]){
                 largest = arr[i];
-            }
-        
-            
+            }            
         }
         return largest;
     }
@@ -45,7 +43,7 @@ public class revision{
         for(int i=n; i>=0; i--){
             System.out.print(arr[i] + ",");
         }
-    }
+    }   
 
     public static void reverseOptimized(int arr[]){
         int n = arr.length-1;   
@@ -123,8 +121,29 @@ public class revision{
         for(int i=1; i<arr.length; i++){
             currSum = Math.max(currSum, currSum + arr[i]);
             maxSum = Math.max(currSum, maxSum);
-        }
+        } 
         return maxSum;
+    }
+
+    public static int trappedRainWater(int height[]){
+        int n = height.length;
+        int leftMax[] = new int[n];
+        leftMax[0] = height[0];
+        for(int i=1; i<height.length; i++){
+            leftMax[i] = Math.max(height[i], leftMax[i-1]);
+        }
+
+        int rightMax[] = new int[n];
+        rightMax[n-1] = height[n-1];
+        for(int i=n-2; i>=0; i--){
+            rightMax[i] = Math.max(height[i], rightMax[i+1]);
+        }
+        int trappedWater = 0;
+        for(int i=0; i<n; i++){
+            int waterLevel = Math.min(leftMax[i], rightMax[i]);
+            trappedWater += waterLevel - height[i];
+        }
+        return trappedWater;
     }
 
 
@@ -198,7 +217,11 @@ public class revision{
 
 
         //Best kadanes algo
-        int arr[] = {1,-4,6,8,9,10,-2};
-        System.out.println(kadanesOg(arr));
+        // int arr[] = {1,-4,6,8,9,10,-2};
+        // System.out.println(kadanesOg(arr));
+
+        //TrappedRainWater 
+        int height[] = {2,4,55,6,7,88,10};
+        System.out.println(trappedRainWater(height));
     }  
 }  
