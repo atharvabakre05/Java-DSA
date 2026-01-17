@@ -12,27 +12,76 @@ public class revision {
         }
         System.out.println("Key not found!"); 
         return false;
+    }
+
+    public static void printSpiral(int matrix[][]){
+        int startRow = 0;
+        int startCol = 0;
+        int endRow = matrix.length-1;
+        int endCol = matrix[0].length-1;
+
+        while(startRow<=endRow && startCol<=endCol) {
+            //top
+            for(int j=startCol; j<=endCol; j++){
+                System.out.print(matrix[startRow][j]+ " ");
+            }
+
+            //right boundary
+            for(int i=startRow+1;i<=endRow;i++){
+                System.out.print(matrix[i][endCol]+ " ");
+            }
+
+            //bottom
+            for(int j=endCol-1;j>=startCol; j--){
+                if(startRow == endRow){
+                    break;
+                }
+                System.out.print(matrix[endRow][j] + " ");
+            }
+
+            //left boundary
+            for(int i=endRow-1; i>=startRow+1; i--){
+                if(startCol == endCol){
+                    break;
+                }
+                System.out.print(matrix[i][startCol]+ " ");
+            }
+
+            startCol++;
+            startRow++;
+            endCol--;
+            endRow--;
+        }
+        System.out.println();
 
     }
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int arr[][] = new int [3][3];
-        int n=3,m=3;
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<arr.length; j++){
-                arr[i][j] = sc.nextInt();
-            }
-        }
-
+        // int arr[][] = new int [3][3];
+        // int n=3,m=3;
+        // for(int i=0; i<arr.length; i++){
+        //     for(int j=0; j<arr.length; j++){
+        //         arr[i][j] = sc.nextInt();
+        //     }
+        // }
 
         //output
-        for(int i=0; i<n; i++){
-            for(int j=0; j<m; j++){
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // for(int i=0; i<n; i++){
+        //     for(int j=0; j<m; j++){
+        //         System.out.print(arr[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
+        // search(arr, 5);
 
-        search(arr, 5);
+        //Spiral Matrix
+        int matrix[][] = {
+            {1,2,3,4}, 
+            {5,6,7,8}, 
+            {10,11,12,13}, 
+            {14,15,16,17}};
+        printSpiral(matrix);
+
     }
 }
