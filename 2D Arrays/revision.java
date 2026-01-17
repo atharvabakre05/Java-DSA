@@ -56,6 +56,21 @@ public class revision {
 
     }
 
+
+    public static int diagonalSum(int matrix[][]){
+        int sum = 0;
+        for(int i=0; i<matrix.length; i++){
+            for(int j=0; j<matrix[0].length; j++){
+                if(i==j){
+                    sum += matrix[i][j];
+                }else if(i+j == matrix.length-1){
+                    sum += matrix[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         // int arr[][] = new int [3][3];
@@ -81,7 +96,9 @@ public class revision {
             {5,6,7,8}, 
             {10,11,12,13}, 
             {14,15,16,17}};
-        printSpiral(matrix);
+        // printSpiral(matrix);
+        int res = diagonalSum(matrix);
+        System.out.println(res);
 
     }
 }
