@@ -17,12 +17,17 @@ public class revQue {
 
     public static int sumofRow(int matrix[][]){
         int sum = 0;
-        for(int i=0; i<matrix)
+        for(int i=1; i<matrix.length-1; i++){
+            for(int j=0; j<matrix[0].length; j++) {
+                sum += matrix[i][j];
+            }
+        }
+        return sum;
     }
 
     public static void main(String args[]) {
         int matrix[][] = {{4,7,8}, {8,8,7}, {2,7,9}};
-        System.out.print(printNumber(matrix));
-
+        System.out.print(sumofRow(matrix));
+        
     }
 }
