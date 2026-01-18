@@ -147,6 +147,20 @@ public class revision{
     }
 
 
+    public static int buyAndSellStock (int arr[]) {
+        int buyStock  = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        for(int i=0; i<arr.length; i++){    
+            if(buyStock<arr[i]){
+                int profit = arr[i] - buyStock;
+                maxProfit = Math.max(maxProfit, profit);
+            }else{
+                buyStock =  arr[i];
+            }
+        }
+         return maxProfit;
+    }
+
 
     public static void main(String[] args){
 
@@ -221,7 +235,11 @@ public class revision{
         // System.out.println(kadanesOg(arr));
 
         //TrappedRainWater 
-        int height[] = {2,4,55,6,7,88,10};
-        System.out.println(trappedRainWater(height));
+        // int height[] = {2,4,55,6,7,88,10};
+        // System.out.println(trappedRainWater(height));
+
+        //BUYAND SELLSTOCK
+        int prices[] = {1,2,44,5,66,7,98};
+        System.out.println(buyAndSellStock(prices));
     }  
 }  
