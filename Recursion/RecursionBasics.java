@@ -1,6 +1,7 @@
 import java.util.*;
 public class RecursionBasics{
     
+    //Problem 1
     public static void printDec(int n){
         if(n == 1){
             System.out.println(n);
@@ -10,8 +11,19 @@ public class RecursionBasics{
         printDec(n-1);
     }
 
+
+    public static void printInc(int n){
+        if(n==1){
+            System.out.print(n + " ");
+            return;
+        }
+        printInc(n-1);
+        System.out.print(n+ " ");
+    }`
+
     public static void main(String[] args){
         int n = 10;
-        printDec(n);
+        // printDec(n);
+        printInc(n);
     }
 }
