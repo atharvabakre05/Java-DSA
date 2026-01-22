@@ -75,20 +75,52 @@ import java.util.*;
 
 
             //Sorting in ArrayList
-            ArrayList<Integer> list = new ArrayList<>();
-            list.add(2);
-            list.add(55);
-            list.add(99);
-            list.add(21);
+            // ArrayList<Integer> list = new ArrayList<>();
+            // list.add(2);
+            // list.add(55);
+            // list.add(99);
+            // list.add(21);
 
+            // // System.out.print(list);
+            // Collections.sort (list); //ascending
             // System.out.print(list);
-            Collections.sort (list); //ascending
-            System.out.print(list);
-            System.out.println();
+            // System.out.println();
 
-            //descending order
-            Collections.sort(list, Collections.reverseOrder());
-            System.out.print(list);
+            // //descending order
+            // Collections.sort(list, Collections.reverseOrder());
+            // System.out.print(list);
+
+
+
+            //MultiDimensional ArrayList
+            ArrayList<ArrayList<Integer>>mainList = new ArrayList<>();
+            ArrayList<Integer>list = new ArrayList<>();
+            list.add(4);
+            list.add(66);
+            list.add(32);
+            list.add(33);
+
+            ArrayList<Integer>list2 = new ArrayList<>();
+            list2.add(55);
+            list2.add(22);
+            list2.add(19);
+            list2.add(2);
+
+            Collections.sort(list2);
+            Collections.sort(list);
+
+            mainList.add(list);
+            mainList.add(list2);
+
+            for(int i=0; i<mainList.size(); i++){
+                ArrayList<Integer>currList = mainList.get(i);
+
+                for(int j=0; j<currList.size();j++){
+                    System.out.print(currList.get(j) + " ");
+                }
+                System.out.println();
+            } 
+
 
 
             //Get Function O(1)
