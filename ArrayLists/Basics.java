@@ -120,7 +120,7 @@ import java.util.*;
                 }
                 System.out.println();
             } 
-
+            System.out.print(mainList);
 
 
             //Get Function O(1)
