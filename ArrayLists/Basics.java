@@ -57,21 +57,38 @@ import java.util.*;
 
 
             //SWAPPING
-            ArrayList<Integer> list = new ArrayList<>();
-            list.add(44);
-            list.add(1, 55);
-            list.add(33);
-            list.add(26);
+            // ArrayList<Integer> list = new ArrayList<>();
+            // list.add(44);
+            // list.add(1, 55);
+            // list.add(33);
+            // list.add(26);
 
             
-            for(int i=0; i<list.size(); i++){
-                System.out.print(list.get(i)+ " ");
-            }
+            // for(int i=0; i<list.size(); i++){
+            //     System.out.print(list.get(i)+ " ");
+            // }
             
-            int idx1 = 2;
-            int idx2 = 0;
+            // int idx1 = 2;
+            // int idx2 = 0;
+            // System.out.println();
+            // swap(list, idx1, idx2);
+
+
+            //Sorting in ArrayList
+            ArrayList<Integer> list = new ArrayList<>();
+            list.add(2);
+            list.add(55);
+            list.add(99);
+            list.add(21);
+
+            // System.out.print(list);
+            Collections.sort (list); //ascending
+            System.out.print(list);
             System.out.println();
-            swap(list, idx1, idx2);
+
+            //descending order
+            Collections.sort(list, Collections.reverseOrder());
+            System.out.print(list);
 
 
             //Get Function O(1)
