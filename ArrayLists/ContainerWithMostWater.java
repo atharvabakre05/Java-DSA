@@ -36,20 +36,41 @@ public class ContainerWithMostWater {
         return maxWater;
     }
 
-
     //Pair Sum-1 BRUTE FORCE
+    // public static boolean pairSum1(ArrayList<Integer>list, int target){
+    //     for(int i=0; i<list.size(); i++){
+    //         for(int j=i+1; j<list.size(); j++){
+    //             if(target == list.get(i) + list.get(j)){
+    //                 System.out.println("The pair is: " + list.get(i) +","+ list.get(j));
+    //                 return true;
+    //             }
+    //         }
+    //     }
+    //     return false;
+    // }
+
+    //Pair Sum-1 TWO POINTERS
     public static boolean pairSum1(ArrayList<Integer>list, int target){
-        for(int i=0; i<list.size(); i++){
-            for(int j=i+1; j<list.size(); j++){
-                if(target == list.get(i) + list.get(j)){
-                    System.out.println("The pair is: " + list.get(i) +","+ list.get(j));
-                    return true;
-                }
+        int lp = 0;
+        int rp = list.size()-1;
+
+        while(lp!=rp){
+            if(list.get(lp) + list.get(rp) == target){
+                return true;
+            }
+            else if(list.get(lp) + list.get(rp) < target){
+                lp++;
+            }else{
+                rp--;
             }
         }
         return false;
     }
+
+
     
+
+
     public static void main(String[] args){
 
         ArrayList<Integer>height = new ArrayList<>();
