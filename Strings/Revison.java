@@ -28,6 +28,8 @@ public class Revison {
         float Y2 = y*y;
         return (float)Math.sqrt(X2+Y2);
     }
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // System.out.println("Enter any string line: ");
@@ -40,9 +42,21 @@ public class Revison {
 
         // String str2 = "racecar";
         // System.out.println(isPalindrome(str2));
-        String str = new String("WNEENESENNN");
-        System.out.println(shortestDistance(str));
+        // String str = new String("WNEENESENNN");
+        // System.out.println(shortestDistance(str));
+
+
+        //Compare to function
+
+        String str[] = {"apple", "mango", "banana"};
+        String largest = str[0];
+        for(int i=1; i<str.length; i++){
+            if(largest.compareTo(str[i])<0){
+                largest = str[i];
+            }
+        }
+        System.out.println(largest);
+
+
     }
-
-
 }
