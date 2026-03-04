@@ -65,6 +65,17 @@ public class RecursionBasics{
         return isSorted(arr, n+1);
     }
 
+    //Problem 7
+    public static int firstOccurence(int arr[], int key, int i){
+        if(i == arr.length){
+            return -1;
+        }
+        if(arr[i] == key){
+            return i;
+        }
+        return firstOccurence(arr,key,i+1);
+    }
+
     public static void main(String[] args){
         int n = 10;
         // printDec(n);
@@ -76,7 +87,8 @@ public class RecursionBasics{
         // System.out.println(fib(12));
 
         int arr[] = {1,2,10,4,5};
-        System.out.println(isSorted(arr, 0));
+        // System.out.println(isSorted(arr, 0));
+        System.out.println(firstOccurence(arr, 4, 0));
     }  
 
 }
