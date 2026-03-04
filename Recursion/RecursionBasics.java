@@ -88,7 +88,7 @@ public class RecursionBasics{
         return isFound;
     }
 
-    //Problem 9
+    //Problem 9 //O(n)
     public static int power(int x, int n){
         if(n==0){
             return 1;
@@ -96,9 +96,23 @@ public class RecursionBasics{
         return x*power(x, n-1);
     }
 
+    //Problem 10 (Optimized x^n)    //O(logn)
+    public static int optimizedPower(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+        int halfPower = optimizedPower(x, n/2);
+        int halfPowerSq = halfPower * halfPower;
+
+        //n is odd
+        if(n%2 != 0){
+            halfPowerSq = x * halfPowerSq;
+        }
+        return halfPowerSq;
+    }
 
     public static void main(String[] args){
-        int n = 10;
+        // int n = 10;
         // printDec(n);
         // printInc(n);
         // System.out.println(fact(5));
@@ -107,11 +121,14 @@ public class RecursionBasics{
         // System.out.println(fib(11));
         // System.out.println(fib(12));
 
-        int arr[] = {1,2,10,4,5,7,4};
+        // int arr[] = {1,2,10,4,5,7,4};
         // System.out.println(isSorted(arr, 0));
         // System.out.println(firstOccurence(arr, 4, 0));
         // System.out.println(lastOccurence(arr, 4, 0));
-        System.out.println(power(2, 10));
-    }  
+        // System.out.println(power(2, 10));
+
+        System.out.println(optimizedPower(2, 5));
+
+    }   
 
 }
