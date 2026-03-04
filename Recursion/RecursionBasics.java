@@ -31,10 +31,24 @@ public class RecursionBasics{
         return fn;
     }
 
+
+    //Problem 4
+    public static int calcSum(int n){
+        if(n == 1){
+            return 1;
+        }
+        int Sm1 = calcSum(n-1);
+        int Sn = n+Sm1;
+        return Sn;
+    }
+
+
+
     public static void main(String[] args){
         int n = 10;
         // printDec(n);
         // printInc(n);
-        System.out.println(fact(5));
-    }
+        // System.out.println(fact(5));
+        System.out.println("The total Sum of first 10 natural numbers is: "+ calcSum(n));
+    }   
 }
