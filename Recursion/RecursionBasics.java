@@ -54,6 +54,16 @@ public class RecursionBasics{
         return fn;
     }
 
+    //Problem 6
+    public static boolean isSorted(int arr[], int n){
+        if(n == arr.length-1){
+            return true;
+        }
+        if(arr[n]>arr[n+1]){
+            return false;
+        }
+        return isSorted(arr, n+1);
+    }
 
     public static void main(String[] args){
         int n = 10;
@@ -61,8 +71,12 @@ public class RecursionBasics{
         // printInc(n);
         // System.out.println(fact(5));
         // System.out.println("The total Sum of first 10 natural numbers is: "+ calcSum(n));
-        System.out.println(fib(10));
-        System.out.println(fib(11));
-        System.out.println(fib(12));
+        // System.out.println(fib(10));
+        // System.out.println(fib(11));
+        // System.out.println(fib(12));
+
+        int arr[] = {1,2,10,4,5};
+        System.out.println(isSorted(arr, 0));
     }  
+
 }
