@@ -26,7 +26,7 @@ public class RecursionBasics{
         if(n==0){
             return 1;
         }
-        int fnm1 = fact(n-1);
+        int fm1 = fact(n-1);
         int fn = n*fact(n-1);
         return fn;
     }
@@ -43,12 +43,26 @@ public class RecursionBasics{
     }
 
 
+    //Problem 5
+    public static int fib(int n){
+        if(n == 1 || n == 0){
+            return n;
+        }
+        int fnm1 = fib(n-1);
+        int fnm2 = fib(n-2);
+        int fn = fnm1 + fnm2;
+        return fn;
+    }
+
 
     public static void main(String[] args){
         int n = 10;
         // printDec(n);
         // printInc(n);
         // System.out.println(fact(5));
-        System.out.println("The total Sum of first 10 natural numbers is: "+ calcSum(n));
-    }   
+        // System.out.println("The total Sum of first 10 natural numbers is: "+ calcSum(n));
+        System.out.println(fib(10));
+        System.out.println(fib(11));
+        System.out.println(fib(12));
+    }  
 }
