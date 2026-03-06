@@ -13,6 +13,7 @@ public class tiling {
         int fn = fnm1 + fnm2;
         return fn;
     }
+    public static fibonnaci
     public static void main(String[] args){
         System.out.println(tilingProblem(3));
     }
