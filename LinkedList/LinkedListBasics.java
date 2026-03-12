@@ -25,9 +25,46 @@ public class LinkedListBasics{
         //step 3 - head = newNode 
         head = newNode;
     }
+
+    public void addLast(int data){
+        //step 1 Create a new Node
+        Node newNode = new Node(data);
+        if(head == null){
+            head = tail = newNode;
+            return;
+        }
+        //step 2 Link
+        tail.next = newNode;
+
+        //Change the tail 
+        tail = newNode;
+    }
+
+    public void print(){    //O(n)
+        // if(head == null){
+        //     System.out.println("LL is empty");
+        // }
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+    
+
     public static void main(String[] args){
-        LinkedListBasics ll = new LinkedList();
+        LinkedListBasics ll = new LinkedListBasics();
+        ll.print();
         ll.addFirst(1);
+        ll.print();
+        ll.addFirst(2);
+        ll.print();
+        ll.addLast(3);
+        ll.print();
+        ll.addLast(4);
+        ll.print();
+
     }
     
 }
