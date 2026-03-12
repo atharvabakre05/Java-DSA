@@ -17,6 +17,9 @@ public class Basics{
         return subString;
     }
 
+
+
+    
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         // String name, sentence;

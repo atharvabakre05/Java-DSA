@@ -10,10 +10,12 @@ public class Revison {
         return true;
     }
 
+    // return false;
+
 
     public static String chartoUpperCase(String str){
-        StringBuilder sb = new StringBuilder("");
 
+        StringBuilder sb = new StringBuilder("");
         char ch = Character.toUpperCase(str.charAt(0));
         sb.append(ch);
 
@@ -29,6 +31,7 @@ public class Revison {
         return sb.toString();
 
     }
+
 
 
 

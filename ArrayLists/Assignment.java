@@ -16,13 +16,26 @@ public class Assignment {
 
     }
 
+
+    //Q2
+    public static ArrayList<Integer>LoneNumbers(ArrayList<Integer>list){
+        
+
+    }
+
+    //Q3
+    
+
     public static void main(String[] args){
         ArrayList<Integer>list = new ArrayList<>();
-        list.add(1);
-        list.add(3);
-        list.add(2);
         list.add(10);
+        list.add(6);
+        list.add(5);
+        list.add(8);
 
-        System.out.println(Monotonic(list));
+        // System.out.println(Monotonic(list));
+
+        System.out.println(LoneNumbers(list));
     }
 }
+
