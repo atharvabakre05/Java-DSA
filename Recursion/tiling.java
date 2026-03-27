@@ -1,20 +1,21 @@
-public class tiling {
-
+import java.util.*;
+public class tiling{
     public static int tilingProblem(int n){
-        if(n==0 || n==1){
+        //base case
+        if(n == 0 || n == 1){
             return 1;
         }
+        //kaam
         //vertical choice 
-        int fnm1 = tilingProblem(n-1);
+        int fm1 = tilingProblem(n-1);
 
         //horizontal choice 
-        int fnm2 = tilingProblem(n-2);
+        int fm2 = tilingProblem(n-2);
 
-        int fn = fnm1 + fnm2;
-        return fn;
+        int totWays = fm1 + fm2;
+        return totWays;
     }
-
-    public static void main(String[] args){
-        System.out.println(tilingProblem(3));
+    public static void main(String args[]){
+        System.out.println(tilingProblem(3));   
     }
 }

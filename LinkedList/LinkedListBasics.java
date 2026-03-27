@@ -108,24 +108,35 @@ public class LinkedListBasics{
         return val;
     }
 
+    public int itSearch(int key){   //O(n)
+        Node temp = head;
+        int i = 0;
+        while(temp != null){
+            if(temp.data == key){
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+
+        //key not found
+        return -1;
+    }
+
+
 
     public static void main(String[] args){
         LinkedListBasics ll = new LinkedListBasics();
         ll.addFirst(2);
-        ll.print();
         ll.addFirst(1);
-        ll.print();
+        ll.addLast(3);
         ll.addLast(4);
-        ll.print();
         ll.addLast(5);
-        ll.print();
-        ll.add(2,3);
-        ll.print();
-        ll.removeFirst();
-        ll.print();
-        ll.removeLast();
-        ll.print();
-        System.out.println(size);
+        ll.print();     //1->2->3->4->5->null
+        // System.out.println(size);
+
+        System.out.println(ll.itSearch(2));
+        System.out.println(ll.itSearch(7));
         
     }
 }
