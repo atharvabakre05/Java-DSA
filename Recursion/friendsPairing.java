@@ -4,16 +4,7 @@ public class friendsPairing {
             if(n == 0 || n == 1){
                 return 1;
             }
-            //Single
-            int fnm1 =  friendPairing(n-1);
-
-            //Pair
-            int fnm2 = friendPairing(n-2);
-            int pairWays = (n-1) * fnm2;
-
-            //totalways
-            int totalWays = fnm1 + pairWays;
-            return totalWays;
+            return friendPairing(n-1) + (n-1) * friendPairing(n-2);
         }
 
         public static void main(String[] args){
