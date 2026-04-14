@@ -123,20 +123,104 @@ public class LinkedListBasics{
         return -1;
     }
 
+    public int helper(Node head, int key){
+        if(head == null){
+            return -1;
+        }
+        if(head.data == key){
+            return 0;
+        }
+        int idx = helper(head.next, key);
+        if(idx == -1){
+            return -1;
+        }
+        return idx+1; 
+    }
 
+    public int recSearch(int key){
+        return helper(head, key);
+    }
 
+    public void reverse(){      //O(n) (3 variables and 4 steps)
+        Node prev = null;
+        Node curr = tail = head;
+        Node next; 
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
+    //Slow-fast Approach
+    public Node findMid(Node head){     //helper func
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;   //+1
+            fast = fast.next.next;  //+2
+        }
+        return slow;    //slow is my midNode
+    }
+    
+    public boolean checkPalindrome(){
+        if(head == null || head.next == null){
+            return true;
+        }
+        //Step 1: Find mid
+        Node midNode = findMid(head);
+        //Step 2 reverse 2nd half
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        Node right = prev; // right half head
+        Node left = head;
+
+        //step 3 check left half and right half
+
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+
+        }
+        return true;
+    }
+
+    
     public static void main(String[] args){
         LinkedListBasics ll = new LinkedListBasics();
-        ll.addFirst(2);
-        ll.addFirst(1);
-        ll.addLast(3);
-        ll.addLast(4);
-        ll.addLast(5);
-        ll.print();     //1->2->3->4->5->null
-        // System.out.println(size);
+        // ll.addFirst(2);
+        // ll.addFirst(1);
+        // ll.addLast(3);
+        // ll.addLast(4);
+        // ll.addLast(5);
+        // ll.print();     //1->2->3->4->5->null
+        // ll.reverse();
+        // ll.print();
 
-        System.out.println(ll.itSearch(2));
-        System.out.println(ll.itSearch(7));
+
+        //Palindromic LL
+        ll.addLast(1);
+        ll.addLast(2);
+        ll.addLast(2);
+        ll.addLast(2);
+
+        ll.print();
+
+        System.out.println(ll.checkPalindrome());
         
     }
 }
