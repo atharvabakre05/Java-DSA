@@ -11,15 +11,20 @@ public class LLRevision {
 
         }
     }
-    // public static Node head;
-    // public static Node tail;
-    // public static Node size;
+    public static Node head;
+    public static Node tail;
+    public static int size;
 
-    // public static void addFirst(int data){
-    //     Node newNode = new Node(data);
-    //     size++;
+    public static void addFirst(int data){
+        Node newNode = new Node(data);
+        size++;
+        if(head == null){
+            head = tail = newNode;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
 
-    // }
     public static void main(String[] args){
         Node head = new Node(10);
         Node second = new Node(20);
