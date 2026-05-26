@@ -9,6 +9,7 @@ public class LinkedListBasics{
             this.next = null;
         }
     }
+        
     public static Node head;
     public static Node tail;
     public static int size;
