@@ -1,6 +1,6 @@
 import java.util.*;
 public class LLRevision {
-    //How a node is created!
+    //Creating a node
     public static class Node{
         int data;
         Node next;
@@ -8,31 +8,29 @@ public class LLRevision {
         public Node(int data){
             this.data = data;
             this.next = null;
-
         }
     }
     public static Node head;
     public static Node tail;
-    public static int size;
+    public static int size ;
 
-    public static void addFirst(int data){
+    public void addFirst(int data){
         Node newNode = new Node(data);
         size++;
-        if(head == null){
-            head = tail = newNode;
-        }
-        newNode.next = head;
-        head = newNode;
+        if()
+
     }
 
     public static void main(String[] args){
+        //CReation and implementation of one single Node in LL
         Node head = new Node(10);
         Node second = new Node(20);
-
         //Linking of nodes
         head.next = second;
-
         System.out.println(head.data);
         System.out.println(second.data);
+
+        //AddFirst and AddLast 
+
     }
 }
