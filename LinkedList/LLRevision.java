@@ -27,6 +27,7 @@ public class LLRevision {
 
     public void addLast(int data){
         Node newNode = new Node(data);
+        size++;
         if(head == null){
             head = tail = newNode;
             return;
@@ -47,16 +48,35 @@ public class LLRevision {
         System.out.println("null");
     }
 
+
+    public void add(int idx, int data){
+        Node newNode = new Node(data);
+        size++;
+        if(idx == 0){
+            addFirst(data);
+            return;
+        }
+        Node temp = head;
+        int i = 0;
+
+        while(i<idx-1){
+            temp = temp.next;
+            i++;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
     public static void main(String[] args){
         LLRevision ll = new LLRevision();
 
-        ll.addFirst(10);
-        ll.addFirst(20);
-        ll.addFirst(30);
         ll.addFirst(40);
-        ll.addLast(70);
+        ll.addFirst(30);
+        ll.addFirst(20);
+        ll.addFirst(10);
+        ll.addLast(50);
         ll.addLast(101);
-
+        ll.add(2, 25);
         ll.printLL();
 
     }
