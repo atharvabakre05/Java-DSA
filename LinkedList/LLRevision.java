@@ -106,6 +106,19 @@ public class LLRevision {
         System.out.println("The node's value which is removed is: "+ val);
     }
 
+    public int itSearch(int key){
+        Node temp = head;
+        int i = 0;
+        while(temp != null){
+            if(temp.data == key){
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
+
     public static void main(String[] args){
         LLRevision ll = new LLRevision();
 
@@ -117,10 +130,10 @@ public class LLRevision {
         ll.addLast(101);
         ll.add(2, 25);
         ll.printLL();
-
         ll.removeFirst();
         ll.removeLast();
         ll.printLL();
+        System.out.println(ll.itSearch(25));
         System.out.println("The size of LL is: "+ ll.size);
 
 
