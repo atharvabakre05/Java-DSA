@@ -67,6 +67,45 @@ public class LLRevision {
         temp.next = newNode;
     }
 
+    public void removeFirst(){
+        if(size == 0){
+            System.out.println("LL is empty");
+        }else if(size == 1){
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            System.out.println("The node's value which is removed is: "+ val);
+        }
+        int val = head.data;
+        head = head.next;
+        size--;
+        System.out.println("The node's value which is removed is: "+ val);
+    }
+
+    public void removeLast(){
+        if(size == 0){
+            System.out.println("LL is empty");
+        }
+        else if(size == 1){
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            System.out.println("The node's value which is removed is: "+ val);
+        }
+
+        Node prev = head;
+        int i = 0;
+        while(i<size-2){
+            prev = prev.next;
+            i++;
+        }
+        int val = tail.data;
+        prev.next = null;
+        tail = prev;
+        size--;
+        System.out.println("The node's value which is removed is: "+ val);
+    }
+
     public static void main(String[] args){
         LLRevision ll = new LLRevision();
 
@@ -78,6 +117,12 @@ public class LLRevision {
         ll.addLast(101);
         ll.add(2, 25);
         ll.printLL();
+
+        ll.removeFirst();
+        ll.removeLast();
+        ll.printLL();
+        System.out.println("The size of LL is: "+ ll.size);
+
 
     }
 }
