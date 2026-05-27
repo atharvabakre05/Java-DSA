@@ -17,20 +17,47 @@ public class LLRevision {
     public void addFirst(int data){
         Node newNode = new Node(data);
         size++;
-        if()
+        if(head == null){
+            head = tail = newNode;
+            return;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
 
+    public void addLast(int data){
+        Node newNode = new Node(data);
+        if(head == null){
+            head = tail = newNode;
+            return;
+        }
+        tail.next = newNode;
+        tail = newNode;
+    }
+
+    public void printLL(){
+        Node temp = head;
+        if(head == null){
+            System.out.println("LL is empty");
+        }
+        while(temp != null){
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
     }
 
     public static void main(String[] args){
-        //CReation and implementation of one single Node in LL
-        Node head = new Node(10);
-        Node second = new Node(20);
-        //Linking of nodes
-        head.next = second;
-        System.out.println(head.data);
-        System.out.println(second.data);
+        LLRevision ll = new LLRevision();
 
-        //AddFirst and AddLast 
+        ll.addFirst(10);
+        ll.addFirst(20);
+        ll.addFirst(30);
+        ll.addFirst(40);
+        ll.addLast(70);
+        ll.addLast(101);
+
+        ll.printLL();
 
     }
 }
