@@ -119,6 +119,21 @@ public class LLRevision {
         return -1;
     }
 
+    public void reverse(){
+        Node prev = null;
+        Node curr = head;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+
+    }
+
     public static void main(String[] args){
         LLRevision ll = new LLRevision();
 
@@ -130,12 +145,12 @@ public class LLRevision {
         ll.addLast(101);
         ll.add(2, 25);
         ll.printLL();
-        ll.removeFirst();
-        ll.removeLast();
+        // ll.removeFirst();
+        // ll.removeLast();
+        
+        ll.reverse();
         ll.printLL();
-        System.out.println(ll.itSearch(25));
-        System.out.println("The size of LL is: "+ ll.size);
-
-
+        // System.out.println(ll.itSearch(25));
+        // System.out.println("The size of LL is: "+ ll.size); 
     }
 }
