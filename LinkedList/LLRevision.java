@@ -131,12 +131,39 @@ public class LLRevision {
             curr = next;
         }
         head = prev;
-
     }
+
+    public void deleteNthfromEnd(int n){
+        //calculate size
+        int sz = 0;
+        Node temp = head;
+        while(temp != null){
+            temp = temp.next;
+            sz++;
+        }
+
+        if(n == sz){
+            head = head.next;   //removeFirst
+            return;
+        }
+
+        //sz-n
+        int i = 1;
+        int iToFind = sz-n;
+        Node prev = head;
+        while(i<iToFind){
+            prev = prev.next;
+            i++;
+        }
+        prev.next = prev.next.next;
+        return;
+    }
+
+
+    
 
     public static void main(String[] args){
         LLRevision ll = new LLRevision();
-
         ll.addFirst(40);
         ll.addFirst(30);
         ll.addFirst(20);
@@ -147,8 +174,9 @@ public class LLRevision {
         ll.printLL();
         // ll.removeFirst();
         // ll.removeLast();
-        
-        ll.reverse();
+        // ll.reverse();
+        // ll.printLL();
+        ll.deleteNthfromEnd(3);
         ll.printLL();
         // System.out.println(ll.itSearch(25));
         // System.out.println("The size of LL is: "+ ll.size); 
