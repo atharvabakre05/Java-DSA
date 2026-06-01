@@ -12,7 +12,7 @@ public class LLRevision {
     }
     public static Node head;
     public static Node tail;
-    public static int size ;
+    public static int size;
 
     public void addFirst(int data){
         Node newNode = new Node(data);
@@ -158,10 +158,7 @@ public class LLRevision {
         prev.next = prev.next.next;
         return;
     }
-
-
     
-
     public static void main(String[] args){
         LLRevision ll = new LLRevision();
         ll.addFirst(40);
