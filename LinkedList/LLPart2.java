@@ -1,5 +1,5 @@
 import java.util.*;
-public class FloydCycleFinding {
+public class LLPart2 {
     public static class Node{
         int data;
         Node next;
@@ -13,8 +13,9 @@ public class FloydCycleFinding {
     public static Node tail;
     public static int size;
     
+    
 
-    public static boolean isCycle(){    //FLoyd's Cycle finding Algorithm
+    public static boolean isCycle(){    //Floyd's Cycle finding Algorithm
         Node fast = head;
         Node slow = head;
 
@@ -28,6 +29,7 @@ public class FloydCycleFinding {
         }
         return false;
     }
+    
 
     public static void main(String[] args){
         head = new Node(1);
