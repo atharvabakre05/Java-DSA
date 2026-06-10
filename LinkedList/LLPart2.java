@@ -30,15 +30,46 @@ public class LLPart2 {
         return false;
     }
     
+    public static void removeCycle(){
+        //detect cycle
+        Node slow = head;
+        Node fast = head;
+        boolean cycle = false;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            
+            if(fast == slow){
+                cycle = true;
+                break;
+            }
+        }
+        if(cycle == false){
+            return;
+        }
+
+        //Find meeting point      
+        slow = head;
+        Node prev = null;   //last node
+        while(fast != slow){
+            prev = fast;
+            slow = slow.next;
+            fast = fast.next;
+        }
+        //remove cycle -> last.next == null
+        prev.next = null;
+    }
 
     public static void main(String[] args){
         head = new Node(1);
-        head.next = new Node(2);
+        Node temp = new Node(2);
+        head.next = temp;
         head.next.next = new Node(3);
-        head.next.next.next = new Node(5);
+        head.next.next.next = temp;
+        //LL: 1->2->3->2
 
-        //LL: 1->2->3->1
         System.out.println(isCycle());
-        
+        removeCycle();
+        System.out.println(isCycle());
     }
 }
