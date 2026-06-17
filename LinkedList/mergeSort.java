@@ -43,7 +43,7 @@ public class mergeSort {
         System.out.println("null");
     }
 
-    private Node getMid(Node head) {
+    public Node getMid(Node head) {
         Node slow = head;
         Node fast = head.next;
 
@@ -54,7 +54,7 @@ public class mergeSort {
         return slow; // MidNode
     }
 
-    private Node merge(Node head1, Node head2) {
+    public Node merge(Node head1, Node head2) {
         Node mergedLL = new Node(-1);
         Node temp = mergedLL;
 
@@ -87,17 +87,21 @@ public class mergeSort {
         if (head == null || head.next == null) {
             return head;
         }
-        // Find mid
-        Node mid = getMid(head);
-        // Divide LL in 2 parts and call mergeSort for both halves
-        Node rightHead = mid.next;
-        mid.next = null;
+
+        // Find midNode
+        Node midNode = getMid(head);
+
+        // divide the Linked list in two halves
+        Node rightHead = midNode.next;
+        midNode.next = null;
         Node newLeft = MergeSort(head);
         Node newRight = MergeSort(rightHead);
-        // merge the halves
+
+        // merge the both halves
         return merge(newLeft, newRight);
     }
-    public static void main(String[] args) {
+
+    public static void main(String[] args){
         mergeSort ll = new mergeSort();
         ll.addFirst(1);
         ll.addFirst(2);
@@ -105,7 +109,7 @@ public class mergeSort {
         ll.addFirst(4);
         ll.addFirst(5);
         ll.print();
-        ll.head = ll.MergeSort(ll.head);
+        head = ll.MergeSort(head);
         ll.print();
     }
 }
