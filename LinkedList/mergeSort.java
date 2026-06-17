@@ -97,7 +97,6 @@ public class mergeSort {
         // merge the halves
         return merge(newLeft, newRight);
     }
-
     public static void main(String[] args) {
         mergeSort ll = new mergeSort();
         ll.addFirst(1);
