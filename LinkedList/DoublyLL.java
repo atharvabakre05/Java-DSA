@@ -36,7 +36,7 @@
                 return;
             }
             tail.next = newNode;
-            newNode.next = null;
+            newNode.prev = tail;
             tail = newNode;
         }
 
@@ -60,6 +60,24 @@
             return val;
         }
 
+        public int removeLast(){
+            if(head == null){
+                System.out.println("DLL is empty");
+                return Integer.MIN_VALUE;
+            }
+            
+            if(size == 1){
+                int val = head.data;
+                head = tail = null;
+                size--;
+                return val;
+            }
+            int val = tail.data;
+            tail = tail.prev;
+            tail.next = null;
+            size--;
+            return val;
+        }   
         //print
         public void print(){
             Node temp = head;
@@ -69,6 +87,7 @@
             }
             System.out.println("null");
         }
+
 
         public static void main(String[] args){
             DoublyLL dll = new DoublyLL();
@@ -82,6 +101,10 @@
             dll.print();
             //1->2->3->4->5
             System.out.println(size);
+            dll.removeLast();
+            dll.print();
+            System.out.println(size);
+
             // dll.removeFirst();
             // dll.print();
             // System.out.println(size);
