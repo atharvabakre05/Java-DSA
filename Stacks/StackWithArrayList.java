@@ -1,5 +1,5 @@
 import java.util.*;
-    public class StackB {
+    public class StackWithArrayList {
         public static class Stack{
                 static ArrayList<Integer> list = new ArrayList<>();
                 public static boolean isEmpty(){
@@ -20,7 +20,7 @@ import java.util.*;
                     int top  = list.get(list.size()-1);
                     list.remove(list.size()-1);
                     return top;
-                }
+                }       
 
                 //peek
                 public static int peek(){
