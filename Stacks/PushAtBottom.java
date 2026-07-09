@@ -5,7 +5,6 @@ public class PushAtBottom{
             s.push(data);
             return;
         }
-
         int top = s.pop();
         pushAtBottom(s, data);
         s.push(top);
@@ -19,9 +18,8 @@ public class PushAtBottom{
         s.push(4);
 
         pushAtBottom(s, 5);
-
         while(!s.isEmpty()){
-            System.out.println(s.pop());
+            System.out.println(s.pop()); 
         }
     }
 }
