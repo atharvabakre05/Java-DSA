@@ -7,6 +7,7 @@ public class ReverseString {
                 s.push(str.charAt(idx));
                 idx++;
             }
+            
             StringBuilder result = new StringBuilder("");
 
             while(!s.isEmpty()){
