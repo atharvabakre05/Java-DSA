@@ -56,7 +56,7 @@ public class Assignment {
                 maxProfit = Math.max(profit, maxProfit);
             }
         }
-        return maxProfit;
+        // return maxProfit;
     }
 
     // Q4: Trapped rain water
@@ -107,15 +107,17 @@ public class Assignment {
     public static void main(String[] args) {
 
         // Example usage of Q5: Triplets
-        int num[] = { -1, 0, 1, 2, -1, -4 };
-        List<List<Integer>> triplets = triplets(num);
+        // int num[] = { -1, 0, 1, 2, -1, -4 };
+        // List<List<Integer>> triplets = triplets(num);
 
-        if (triplets.isEmpty()) {
-            System.out.println("No triplets found.");
-        } else {
-            for (List<Integer> t : triplets) {
-                System.out.println(t);
-            }
-        }
+        // if (triplets.isEmpty()) {
+        //     System.out.println("No triplets found.");
+        // } else {
+        //     for (List<Integer> t : triplets) {
+        //         System.out.println(t);
+        //     }
+        // }
+        int prices[] = {2,10,22};
+        stocks(prices);
     }
 }
