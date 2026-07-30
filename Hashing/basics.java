@@ -14,21 +14,25 @@ public class basics {
         //Size 
         System.out.println("The size of HashMap is: "+ hm.size());
 
-        //Is Empty
-        hm.clear();
-        System.out.println(hm.isEmpty());
+        // //Is Empty
+        // hm.clear();
+        // System.out.println(hm.isEmpty());
 
-        //Get - O(1)
-        System.out.println(hm.get("Indonesia"));
+        // //Get - O(1)
+        // System.out.println(hm.get("Indonesia"));
 
-        //ContainsKey - O(1)
-        System.out.println(hm.containsKey("India"));
-        System.out.println(hm.containsKey("Indiaa"));
+        // //ContainsKey - O(1)
+        // System.out.println(hm.containsKey("India"));
+        // System.out.println(hm.containsKey("Indiaa"));
 
-        //Remove O(1)
-        System.out.println(hm.remove("Australia"));
-        System.out.println(hm);
+        // //Remove O(1)
+        // System.out.println(hm.remove("Australia"));
+        // System.out.println(hm);
 
-        
+        //Iterate HashMap elements
+        Set<String> keys = hm.keySet();
+        for(String k : keys){
+            System.out.println("key=" + k + ", value="+ hm.get(k));
+        }
     }
 }
