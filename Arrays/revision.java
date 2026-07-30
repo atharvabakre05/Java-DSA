@@ -84,7 +84,7 @@ public class revision{
         }
         System.out.println("The total number of all subArrays is: " + ts);  
     }
-
+ 
     public static void maxSubArrSum(int num[]){
         int ms = Integer.MIN_VALUE;
         for(int i=0; i<num.length; i++) {
@@ -239,7 +239,7 @@ public class revision{
         // System.out.println(trappedRainWater(height));
 
         //BUYAND SELLSTOCK
-        int prices[] = {1,2,44,5,66,7,98};
-        System.out.println(buyAndSellStock(prices));
+        // int prices[] = {1,2,44,5,66,7,98};
+        // System.out.println(buyAndSellStock(prices));
     }  
 }  

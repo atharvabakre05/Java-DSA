@@ -22,6 +22,5 @@ public class NextGreaterElement {
         for(int i=0; i<nextGreater.length; i++){
             System.out.print(nextGreater[i] + " ");
         }
-
     }
 }   
