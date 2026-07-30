@@ -34,5 +34,7 @@ public class basics {
         for(String k : keys){
             System.out.println("key=" + k + ", value="+ hm.get(k));
         }
+
+        
     }
 }
