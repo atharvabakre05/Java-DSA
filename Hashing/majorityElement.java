@@ -14,6 +14,8 @@ public class majorityElement{
         //     }
         // }
 
+        
+
         for(int i=0; i<n; i++){
             hm.put(arr[i], hm.getOrDefault(arr[i], 0) + 1);
         }

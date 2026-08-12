@@ -97,8 +97,15 @@ public class revision {
         return false;
     }
 
+    public static void check2d(int matrix[][]){
+        
+    }
+
 
     public static void main(String[] args){
+
+        int arr[][] = {{1,2,3}, {4,5,6}, {7,8,9}};
+        check2d(arr);
         // Scanner sc = new Scanner(System.in);
         // // int arr[][] = new int [3][3];
         // // int n=3,m=3;
@@ -131,12 +138,12 @@ public class revision {
 
 
 
-        int arr[][] = {{1,2}, {4,7}};
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<arr[0].length; j++){
-                System.out.print(arr[i][j] + " ");
-            }
-        }
+        // int arr[][] = {{1,2}, {4,7}};
+        // for(int i=0; i<arr.length; i++){
+        //     for(int j=0; j<arr[0].length; j++){
+        //         System.out.print(arr[i][j] + " ");
+        //     }
+        // }
 
     }
 }

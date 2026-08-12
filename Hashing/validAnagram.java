@@ -6,6 +6,7 @@ public class validAnagram {
             char ch = str.charAt(i);
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
+        
         for(int i=0; i<str2.length(); i++){
             char ch = str2.charAt(i);
             if(map.get(ch) != null){
