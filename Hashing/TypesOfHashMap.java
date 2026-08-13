@@ -1,6 +1,8 @@
 import java.util.*;
-public class linkedHashMap {
+public class TypesOfHashMap {
     public static void main(String[] args){
+
+        //LinkedHashMap
         LinkedHashMap<String, Integer> lhm = new LinkedHashMap<>();
         lhm.put("India", 150);
         lhm.put("USA", 100);
@@ -11,8 +13,15 @@ public class linkedHashMap {
         hm.put("USA", 100);
         hm.put("Germany", 50);
 
-        System.out.println(lhm);
+        //TreeMap
+        TreeMap<String, Integer> thm = new TreeMap<>();
+        thm.put("India", 150);
+        thm.put("USA", 100);
+        thm.put("Germany", 50);
+
         System.out.println(hm);
+        System.out.println(lhm);
+        System.out.println(thm);        
 
     }
 }
